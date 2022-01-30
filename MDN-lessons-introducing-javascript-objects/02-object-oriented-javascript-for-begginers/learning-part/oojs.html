@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Object-oriented JavaScript example</title>
+  </head>
+
+  <body>
+    <p>This example requires you to enter commands in your browser's JavaScript console (see <a href="https://developer.mozilla.org/en-US/docs/Learn/Common_questions/What_are_browser_developer_tools">What are browser developer tools</a> for more information).</p>
+
+  </body>
+
+    <script>
+      function Person(first, last, age, gender, interest) {
+        this.name = {
+          first: first,
+          last: last
+        };
+        this.age = age;
+        this.gender = gender;
+        this.interest = interest;
+        this.bio = function() {
+          let form;
+          if (gender === 'male') {
+            form = 'He';
+          } else if (gender === 'female') {
+            form = 'She';
+          } else {
+            alert(`You must put 'male' or 'female' into 'gender' parameter.`)
+          };
+          let listOfInterests = [];
+          if (typeof this.interest === 'object') {  
+            if (this.interest.length >= 2) {
+              for (let i = 0; i <= (this.interest.length - 2); i++) {
+              listOfInterests += `${this.interest[i]}, `;
+              };
+              listOfInterests += `and ${this.interest[this.interest.length - 1]}`;
+            } else {
+              listOfInterests = this.interest[0];  
+            };
+          } else if (typeof this.interest === 'string') {
+              listOfInterests.push(this.interest);
+          } else {
+              alert(`You must put 'string' or 'array' type value into 'interest' parameter.`);
+          };  
+        alert(`${this.name.first} ${this.name.last} is ${this.age} years old. ${form} likes ${listOfInterests}.`)
+        };
+        this.greeting = function() {
+          alert(`Hi! I'am ${this.name.first}.`);
+        };
+      };
+
+      let person1 = new Person('Lily', 'Peterson', 32, 'female', ['books', 'cars', 'dance', 'fitness']);
+      let person2 = new Person('John', 'Smith', 32, 'male', 'bouldering');
+    </script>
+</html>

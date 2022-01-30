@@ -1,0 +1,57 @@
+<!--
+    Finally for our object basics assessment, we want you to return to the cat object literal from Task #1. We want you to rewrite the greeting() method so that it logs "Hello, said Bertie the Cymric." to the browser DevTools' console, but in a way that will work across any cat object of the same structure, regardless of its name or breed.
+
+    When you are done, write your own object called cat2, which has the same structure, exactly the same greeting() method, but a different name, breed, and color.
+
+    Call both greeting() methods to check that they log appropriate greetings to the console.
+
+    The code is not very DRY (each bit of code should only be defined once) — you've got the same method defined twice, for example. Describe how you'd make it more DRY? If you are not sure, then don't worry — this is what we'll be looking at in future articles in the series!
+
+    Try updating the live code below to recreate the finished example:
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Object basics: Task 3</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    function CatGenerator(name, breed, color) {
+    this.name = name;
+    this.breed = breed;
+    this.color = color;
+    this.greeting = function() {
+        return console.log(`Hello, said ${this.name} the ${this.breed}`);
+    };
+    }
+
+    const cat = new CatGenerator('Bertie', 'Cymric', 'white');
+    const cat2 = new CatGenerator('Misia', 'non-purebreed', 'black & white');
+
+    cat.greeting();
+    cat2.greeting();
+  </script>
+
+</html>
