@@ -3,9 +3,6 @@ GOAL:
 Context: The company that you work for suspects that credit card distributors have been mailing out cards that have invalid numbers. In this project, you have the role of a clerk who checks if credit cards are valid. Every other clerk currently checks using pencil and paper, but you’ll be optimizing the verification process using your knowledge of functions and loops to handle multiple credit cards at a time. Unlike the other clerks, you can spend the rest of your time relaxing!
 
 As you progress through the steps, use the terminal and console.log() statements to check the output of your loops and functions.
-
-
-
 */
 
 // All valid credit card numbers
@@ -32,15 +29,15 @@ const mystery5 = [4, 9, 1, 3, 5, 4, 0, 4, 6, 3, 0, 7, 2, 5, 2, 3]
 // An array of all the arrays above
 const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, invalid3, invalid4, invalid5, mystery1, mystery2, mystery3, mystery4, mystery5]
 
-
 // Add your functions below:
 
 //Find out if a credit card number is valid or not (Luhn algorithm (see: https://en.wikipedia.org/wiki/Luhn_algorithm#Description) implemented)
-const validateCred = (array) => {
-    let checkDigit = array[array.length - 1];
-    const parity = (array.length - 2) % 2;
-    for(let i = array.length - 2; i >= 0; i--) {
-        let digit = array[i];
+const validateCred = (validatedCard) => {
+    this.card = validatedCard;
+    let checkDigit = this.card[this.card.length - 1];
+    const parity = (this.card.length - 2) % 2;
+    for(let i = this.card.length - 2; i >= 0; i--) {
+        let digit = this.card[i];
         if(i % 2 === parity) {
             digit *= 2;
         }
@@ -65,17 +62,17 @@ const findInvalidCards = (listOfCards) => {
 }
 
 //Identify the credit card companies that have possibly issued these faulty numbers
-let invalidCardCompanies = [];
+let invalidCardsCompanies = [];
 
 const addCompany = (company) => {
-    if(!invalidCardCompanies.includes(company)) {
-        invalidCardCompanies.push(company);
+    if(!invalidCardsCompanies.includes(company)) {
+        invalidCardsCompanies.push(company);
     }
 }
 
-const idInvalidCardCompanies = (invalidCardArray) => {
-    for(let k = 0; k < invalidCardArray.length; k++) {
-        switch(invalidCardArray[k][0]) {
+const idInvalidCardCompanies = (invalidCard) => {
+    for(let k = 0; k < invalidCard.length; k++) {
+        switch(invalidCard[k][0]) {
             case 3:
                 addCompany('Amex');
                 break;
@@ -92,9 +89,41 @@ const idInvalidCardCompanies = (invalidCardArray) => {
                 addCompany('Company not found');                         
         }   
     }
-    return invalidCardCompanies;
+    return invalidCardsCompanies;
+}
+
+//Create a function that accepts a string and converts it into an array of numbers
+
+const convertStringToIntegerArray = (string) => {
+    return string.split('').map(l => Number(string[l]));
+}
+
+//Create a function that will convert invalid numbers into valid numbers
+const makeCardValid = (validatedCard) => {
+    this.card = validatedCard;
+    let checkDigit1 = this.card[this.card.length - 1];
+    const parity = (this.card.length - 2) % 2;
+    for(let m = this.card.length - 2; m >= 0; m--) {
+        let digit1 = this.card[m];
+        if(m % 2 === parity) {
+            digit1 *= 2;
+        }
+        if(digit1 > 9) {
+            digit1 -= 9;
+        }
+        checkDigit1 += digit1;
+    }
+    if(checkDigit1 % 10 !== 0) {
+        this.card[this.card.length - 1] += 10 - (checkDigit1 % 10);
+    }
+    return this.card;
 }
 
 //Check correctness of the solutions
+console.log(validateCred(valid3));
+console.log(validateCred(invalid3));
+console.log(validateCred(mystery3));
 console.log(findInvalidCards(batch));
 console.log(idInvalidCardCompanies(invalidCards));
+console.log(convertStringToIntegerArray('4556748996426262'));
+console.log(validateCred(makeCardValid(invalid3)));
