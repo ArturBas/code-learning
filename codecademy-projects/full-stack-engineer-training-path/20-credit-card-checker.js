@@ -35,7 +35,7 @@ const batch = [valid1, valid2, valid3, valid4, valid5, invalid1, invalid2, inval
 const validateCred = (validatedCard) => {
     this.card = validatedCard;
     let checkDigit = this.card[this.card.length - 1];
-    const parity = (this.card.length - 2) % 2;
+    let parity = (this.card.length - 2) % 2;
     for(let i = this.card.length - 2; i >= 0; i--) {
         let digit = this.card[i];
         if(i % 2 === parity) {
@@ -50,7 +50,7 @@ const validateCred = (validatedCard) => {
 }
 
 //Check through the nested array for which numbers are invalid, and return another nested array of invalid cards
-const invalidCards = [];
+let invalidCards = [];
 
 const findInvalidCards = (listOfCards) => {
     for(let j = 0; j < listOfCards.length; j++) {
@@ -102,7 +102,7 @@ const convertStringToIntegerArray = (string) => {
 const makeCardValid = (validatedCard) => {
     this.card = validatedCard;
     let checkDigit1 = this.card[this.card.length - 1];
-    const parity = (this.card.length - 2) % 2;
+    let parity = (this.card.length - 2) % 2;
     for(let m = this.card.length - 2; m >= 0; m--) {
         let digit1 = this.card[m];
         if(m % 2 === parity) {
