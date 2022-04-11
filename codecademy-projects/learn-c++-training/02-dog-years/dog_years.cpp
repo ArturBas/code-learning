@@ -1,4 +1,5 @@
 /*
+GOAL:
 "How old is your fuzzy friend in human years?"
 Dogs mature at a faster rate than human beings. If you own a dog, you might’ve heard this rule: one year for Snoopy equals seven years for you. Turns out, the math isn’t that simple. Dogs mature more quickly than we do early on.
 
@@ -12,6 +13,7 @@ So a one-year-old dog is 10.5 years old in human years, and a two-year-old dog i
 Write a C++ program called dog_years.cpp to calculate the age, in human years, of any dog older than 2.
 */
 
+//SOLUTION:
 #include <iostream>
 
 int main() {
