@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+header {
+    background-image: url(../images/img01_pattern.jpeg);
+    background-size: cover;
+    position: fixed;
+    top: 0;
+    height: 400px;
+    width: 100%;
+    box-shadow: 0 0 20px #333333;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#header-text {
+    color: darkgrey;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 800;
+    font-size: 80px;
+    text-align: center;
+    text-shadow: 0 0 20px #333333, 0 0 20px #333333;
+    text-transform: uppercase;
+}
+
+section {
+    position: relative;
+    top: 400px;
+    max-width: 850px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.col-container {
+    position: relative;
+    height: 400px;
+    width: 250px;
+    margin: 20px 15px;
+}
+
+.col-header {
+    height: 250px;
+    width: 100%;
+    box-shadow: 0 0 20px #333333;
+}
+
+#img2 {
+    background-image: url(../images/img02_hacksaw.jpeg);
+    background-size: cover;
+}
+
+#img3 {
+    background-image: url(../images/img03_frames.jpeg);
+    background-size: cover;
+}
+
+#img4 {
+    background-image: url(../images/img04_finnish.jpeg);
+    background-size: cover;
+}
+
+.col-title {
+    color: #333333;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    text-shadow: 0 0 20px whitesmoke, 0 0 20px whitesmoke;
+    text-transform: uppercase;
+}
+
+.col-subtitle {
+    color: #333333;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    text-shadow: 0 0 20px whitesmoke, 0 0 20px whitesmoke;
+    margin-top: 150px;
+}
+
+.col-body {
+    color: #333333;
+    font-family: 'Raleway', sans-serif;
+    font-size: 15px;
+    text-align: left;
+    padding: 10px;
+}
+
+.price {
+    font-weight: bold;
+}
+
+a:link {
+    color: #333333;
+    text-decoration: none;
+}
+a:visited {
+    color: darkgoldenrod;
+    text-decoration: none;
+}
+a:hover {
+    color: gray;
+    text-decoration: none;
+}
+
+footer {
+    background-color: #333333;
+    position: relative;
+    top: 400px;
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#footer-text {
+    color: darkgray;
+    font-family:'Courier New', Courier, monospace;
+    font-size: 15px;
+    text-align: center;
+}
+
+@media (max-width: 500px) {
+    #header-text {
+        font-size: 50px;
+        padding: 0 40px;
+    }
+    
+    .col-title,
+    .col-subtitle {
+        font-size: 15px;
+        text-shadow: 0 0 10px whitesmoke, 0 0 10px whitesmoke;
+    }
+
+    .col-body {
+        font-size: 8px;
+    }
+}

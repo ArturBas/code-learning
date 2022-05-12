@@ -11,32 +11,33 @@ body{
 header {
     background-color: #04070B;
     width: 100%;
-    position: relative;
+    position: fixed;
+    top: 0;
+    z-index: 1;
 }
 
 #fear-image {
     width: 25%;
-    height: auto;
     margin: 0;
     display: inline-block;
 }
 
 #author {
     padding-left: 20px;
-    text-align: left;
     color: antiquewhite;
     font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
     display: inline-block;
     position: absolute;
     bottom: 10%;
 }
 
 section {
-    margin: 2% 25%;
-    padding: 20px;
+    margin: 15% 25% 15% 25%;
     color: antiquewhite;
     font-family: 'Courier New', Courier, monospace;
     text-align: justify;
+    position: relative;
 }
 
 #about-author {
@@ -59,9 +60,16 @@ a:hover {
 
 footer {
     color: antiquewhite;
+    background-color: #04070B;
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
-    position: absolute;
-    bottom: 2%;
-    left: 50%;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 500px) {
+    #author {
+        font-size: 15px;
+    }
 }
