@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Windows PowerShell own cheat sheet</title>
+    <link rel="stylesheet" type="text/css" href="reset.css" />
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>Windows PowerShell Own Cheat Sheet</header>
+    <section>
+        <div class="container">
+            <table>
+              <thead>
+                <tr>
+                  <th>
+                    <p class="tab-title">Command / Parameter</p>
+                  </th>
+                  <th>
+                    <p class="tab-title">Execution</p>
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="left">
+                    <p class="command">gci</p>
+                  </td>
+                  <td>
+                    <p class="execution">checking directory contents</p>
+                  </td>
+                </tr>
+               <tr>
+                  <td class="left">
+                    <p class="command">sl</p>
+                  </td>
+                  <td>
+                    <p class="execution">moving between directories</p>
+                  </td>
+                </tr>
+               <tr>
+                  <td class="left">
+                    <p class="command">mkdir</p>
+                  </td>
+                  <td>
+                    <p class="execution">creating new directory</p>
+                  </td>
+                </tr>
+               <tr>
+                  <td class="left">
+                    <p class="command">explorer</p>
+                  </td>
+                  <td>
+                    <p class="execution">opening Windows Explorer</p>
+                  </td>
+                </tr>
+               <tr>
+                  <td class="left">
+                    <p class="command">rm</p>
+                  </td>
+                  <td>
+                    <p class="execution">remove item</p>
+                  </td>
+                </tr>                        
+                <tr>
+                  <td class="left">
+                    <p class="command">pushd</p>
+                  </td>
+                  <td>
+                    <p class="execution">moving into the given directory after marking the current directory so it can be returned</p>
+                  </td>
+                </tr>  
+                <tr>
+                  <td class="left">
+                    <p class="command">popd</p>
+                  </td>
+                  <td>
+                    <p class="execution">backing to the last directory you were in before using pushd</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="left">
+                    <p class="command">ni</p>
+                  </td>
+                  <td>
+                    <p class="execution">creating new file</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="left">
+                    <p class="command">cp</p>
+                  </td>
+                  <td>
+                    <p class="execution">copying file</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="left">
+                    <p class="command">Move-Item<br>
+                    <span class="parameter">-Path -Destination</span></p>
+                  </td>
+                  <td>
+                    <p class="execution">moving file from given path to given -Destination</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="left">
+                    <p class="command">mv</p>
+                  </td>
+                  <td>
+                    <p class="execution">renaming file</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="left">
+                    <p class="command">write</p>
+                  </td>
+                  <td>
+                    <p class="execution">putting a content of one text (by using "") directly into the command-line window or into the file (by using > and the file name - then it will overwrote what was already there or by using >> and the file name  - then it will append the new content)</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="left">
+                    <p class="command">gc</p>
+                  </td>
+                  <td>
+                    <p class="execution">reading file</p>
+                  </td>
+                </tr>
+              </tr>
+              <tr>
+                <td class="left">
+                  <p class="command">*</p>
+                </td>
+                <td>
+                  <p class="execution">wildcard, can be used to replace any part of a file name</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="left">
+                  <p class="command">sls "unique existence" *.txt</p>
+                </td>
+                <td>
+                  <p class="execution">spitting out all the lines containing string (which is put in "") from any file in our directory ending in .txt</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="left">
+                  <p class="command">control-c</p>
+                </td>
+                <td>
+                  <p class="execution">stopping infinity loops or long tasks</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="left">
+                  <p class="command">Get-Help</p>
+                </td>
+                <td>
+                  <p class="execution">showing the list of parameters possible to use for given cmdlet</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="left">
+                  <p class="command">Get-Help<br>
+                  <span class="parameter">-online</span></p>
+                </td>
+                <td>
+                  <p class="execution">asking the browser to open a page on Microsoft's TechNet portal that explains all the parameters possible to use for given cmdlet</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="left">
+                  <p class="parameter">-exclude</p>
+                </td>
+                <td>
+                  <p class="execution">omitting the specified items</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="left">
+                  <p class="command">measure</p>
+                </td>
+                <td>
+                  <p class="execution">measuring specified properties such like line (<span class="parameter">-l</span>), word (<span class="parameter">-w</span>), character (<span class="parameter">-c</span>) or (<span class="parameter">-IgnoreWhiteSpace</span>)</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="left">
+                  <p class="command">|</p>
+                </td>
+                <td>
+                  <p class="execution">piping, sort of like redirection, it tells it to take the output of one cmdlet and use it as the input for another</p>
+                </td>
+              </tr>
+              <tr>
+                <td class="left">
+                  <p class="command">python</p>
+                </td>
+                <td>
+                  <p class="execution">running Python scripts by following the command by the path for the script you want (it’s easiest to first navigate to the directory with the script in it, and then just enter python script-name.py)</p>
+                </td>
+              </tr>
+            </tbody>
+            </table>
+          </div>
+    </section>   
+</body>
+<footer>
+  <p>&copy; Artur Bas 2022</p>
+</footer>
+</html>

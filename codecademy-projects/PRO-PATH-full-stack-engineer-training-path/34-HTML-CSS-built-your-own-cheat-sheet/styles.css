@@ -1,0 +1,65 @@
+body {
+  background-color: rgb(1, 36, 86);
+  color: white;
+  font-family: 'Consolas', sans-serif;
+  font-size: 14px;
+}
+  
+header {
+  text-align: center;
+  background-color: black;
+  color: red;
+  position: fixed;
+  padding: 5px;
+  top: 0px;
+  width: 100%;
+  margin-top: 0px;
+  font-size: 18px;
+  }
+  
+table {
+  text-align: center;
+  margin: 40px auto;
+}
+
+.tab-title {
+  color: gray;
+  font-size: 16px;
+}
+
+  th {
+    border: 1px dotted  darkcyan;
+  }
+  
+  td {
+    border: 1px dotted darkcyan;
+    width: 300px;
+  }
+  
+
+  .container {
+    max-width: 940px;
+    margin: 0 auto;
+  }
+  
+  
+  .left {
+    width: 150px;
+  }
+
+  .command {
+    color: yellow;
+  }
+  
+  .parameter {
+    color: darkcyan;
+  }
+
+  p {
+    padding: 5px;
+  }
+
+  footer {
+    text-align: center;
+    color: greenyellow;
+  }
