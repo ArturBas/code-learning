@@ -1,0 +1,82 @@
+a {
+  color: #2176FF;
+  text-decoration: underline 1.5px;
+}
+
+a:visited {
+  color: purple;
+}
+
+a:hover {
+  color: orange;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a:active {
+  color: darkslategrey;
+  text-decoration: none;
+}
+
+.nav-link {
+  color: dimgrey;
+  text-decoration: none;
+}
+
+.nav-link:visited {
+  color: dimgrey;
+}
+
+a.nav-link:hover {
+  font-size: 18px;
+}
+
+a.nav-link.logo:hover {
+  font-size: 34px;
+}
+
+.btn {
+  background-color: #2176FF;
+  color: #ffffff;
+  font-family: 'Raleway',sans-serif;
+  padding: 20px;
+  border-radius: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+a.btn:visited {
+  color: #ffffff;
+}
+
+a.btn:hover {
+  background-color: orange;
+  color: #ffffff;
+}
+
+a.btn:active {
+  background-color: darkslategrey;
+  color: #ffffff;
+}
+
+.activity {
+  border-radius: 15px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+a.activity:visited {
+  color: #ffffff;
+}
+
+a.activity:hover {
+  background-color: orange;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+a.activity:active {
+  background-color: darkslategrey;
+  color: #ffffff;
+}

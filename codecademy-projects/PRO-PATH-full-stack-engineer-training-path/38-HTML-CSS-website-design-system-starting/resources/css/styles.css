@@ -1,0 +1,220 @@
+@font-face {
+  font-family: 'Roboto Mono Regular';
+  src: url('../fonts/Roboto_Mono/RobotoMono-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Mono Italic';
+  src: url('../fonts/Roboto_Mono/RobotoMono-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto Mono Bold';
+  src: url('../fonts/Roboto_Mono/RobotoMono-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Ibarra Real Nova Regular';
+  src: url('../fonts/Ibarra_Real_Nova/IbarraRealNova-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Ibarra Real Nova Italic';
+  src: url('../fonts/Ibarra_Real_Nova/IbarraRealNova-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Ibarra Real Nova Bold';
+  src: url('../fonts/Ibarra_Real_Nova/IbarraRealNova-Bold.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Archivo Narrow Regular';
+  src: url('../fonts/Archivo_Narrow/ArchivoNarrow-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Archivo Narrow Italic';
+  src: url('../fonts/Archivo_Narrow/ArchivoNarrow-Italic.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Archivo Narrow Bold';
+  src: url('../fonts/Archivo_Narrow/ArchivoNarrow-Bold.ttf') format('truetype');
+}
+
+
+body {
+  background-color: #090A0C;
+  color: #727475;
+}
+
+section {
+  border: 1px solid #727475;
+  border-radius: 20px;
+  padding: 20px;
+  margin: 10px 20px 0 20px;
+}
+
+h1 {
+  font-size: 25px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #FFFFFF;
+}
+
+h2 {
+  font-size: 20px;
+  font-family: 'Courier New', Courier, monospace;
+  color: #FFFFFF;
+}
+
+/*Header*/
+
+header {
+  padding: 20px;
+}
+
+/*Section: Colors*/
+
+.colors-panel {
+  border: 1px solid #727475;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  text-align: center;
+  display: inline-block;
+  padding: 20px;
+  margin: 20px 20px 0 0;
+}
+
+.color-label {
+  font-family: 'Courier New', Courier, monospace;
+  color: #090A0C;
+  font-weight: bold;
+}
+
+.color-hex {
+  font-family: 'Courier New', Courier, monospace;
+  font-style: italic;
+  font-weight: bold;
+  color: #090A0C;
+}
+
+.color1 {
+  background-color: #ADBAD7;
+}
+
+.color2 {
+  background-color: #8AA5E4;
+}
+
+.color3 {
+  background-color: #3E5A9A;
+}
+
+/*Section: Fonts*/
+
+.fonts-panel {
+  border: 1px solid #727475;
+  background-color: #FFFFFF;
+  border-radius: 20px;
+  text-align: center;
+  display: inline-block;
+  padding: 20px;
+  margin: 20px 20px 0 0;
+  font-size: 15px;
+}
+
+.fonts-label {
+  font-family: 'Courier New', Courier, monospace;
+  color: #090A0C;
+  font-size: 17px;
+  font-weight: bold;
+  padding-bottom: 20px;
+}
+
+.regular-font1 {
+  font-family: 'Roboto Mono Regular', monospace;
+  padding-bottom: 10px;
+}
+
+.italic-font1 {
+  font-family: 'Roboto Mono Italic', monospace;
+  padding-bottom: 10px;
+}
+
+.bold-font1 {
+  font-family: 'Roboto Mono Bold', monospace;  
+}
+
+.regular-font2 {
+  font-family: 'Ibarra Real Nova Regular', serif;
+  padding-bottom: 10px;
+}
+
+.italic-font2 {
+  font-family: 'Ibarra Real Nova Italic', serif;
+  padding-bottom: 10px;
+}
+
+.bold-font2 {
+  font-family: 'Ibarra Real Nova Bold', serif;
+}
+
+.regular-font3 {
+  font-family: 'Archivo Narrow Regular', sans-serif;
+  padding-bottom: 10px;
+}
+
+.italic-font3 {
+  font-family: 'Archivo Narrow Italic', sans-serif;
+  padding-bottom: 10px;
+}
+
+.bold-font3 {
+  font-family: 'Archivo Narrow Bold', sans-serif;
+}
+
+/*Section: Text-Styles*/
+
+.texts-panel {
+  padding: 10px;
+  margin: 10px 10px 0 0;
+  font-size: 15px;;
+}
+
+#text-h1 {
+  font-size: 25px;
+  font-family: 'Roboto Mono Bold', monospace;
+}
+
+#text-h2 {
+  font-size: 20px;
+  font-family: 'Ibarra Real Nova Bold', serif;
+}
+
+#text-p {
+  font-size: 15px;
+  font-family: 'Archivo Narrow Regular', sans-serif;
+  color: #FFFFFF;
+}
+
+ul {
+  list-style-type: circle;
+  padding: 20px 0 0 20px;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+li {
+  padding-bottom: 5px;
+}
+
+/*Footer*/
+
+footer {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 15px;
+  text-align: center;
+  margin: 10px;
+  padding: 10px;
+}
