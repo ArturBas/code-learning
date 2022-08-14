@@ -1,0 +1,157 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 22px;
+  color: seashell;
+  background-color: black;
+  opacity: 0.9;
+  text-align: center;
+}
+
+/*Header*/
+
+header {
+  height: 69px;
+  background-color: black;
+  border-bottom: 1px solid seashell;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  top: 0%;
+  z-index: 1;
+}
+
+.logo {
+  padding: 10px;
+}
+
+.navigation {
+  padding: 5px;
+}
+
+.nav-link {
+  padding: 10px;
+  text-decoration: underline;
+}
+
+.nav-link:visited {
+  color: seashell;
+}
+
+a.nav-link:hover {
+  color: darkgoldenrod;
+}
+
+/*Section: Mission*/
+
+.mission {
+  margin-top: 70px;
+  background-image: url(./../images/img-mission-background.jpg);
+  height: 700px;
+  width: 1200px;
+  background-position: center;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#mission-header {
+  width: 100%;
+  background-color: black;
+}
+
+/*Section: Featured*/
+
+.featured {
+  width: 1200px;
+  position: relative;
+  text-align: center;
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+.products-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.product {
+  margin: 10px 15px;
+}
+
+.product-image {
+  margin-bottom: 10px;
+}
+
+.product-name {
+  font-weight: bold;
+}
+
+/*Section: Locations*/
+
+.locations {
+  background-image: url(./../images/img-locations-background.jpg);
+  height: 500px;
+  width: 1200px;
+  background-position: center;
+  position: relative;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+.locations-container {
+  display: flex;
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 15px 20px;
+  background-color: black;
+  padding-bottom: 10px;
+  opacity: 1;
+  line-height: 65px;
+}
+
+.location-name {
+  margin: 0;
+}
+
+#location-header {
+  margin-bottom: 0;
+}
+
+/*Section: Contact*/
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+}
+
+#phone {
+  font-weight: bold;
+}
+
+/*Footer*/
+
+footer {
+  margin: 100px 20px 40px 20px;
+  text-align: left;
+}
