@@ -10,12 +10,55 @@ header {
   background-color: black;
   color: darkcyan;
   position: fixed;
-  padding: 5px;
+  padding: 15px;
   top: 0px;
   width: 100%;
   margin-top: 0px;
   font-size: 25px;
   }
+
+.nav-link {
+  padding: 10px;
+  text-decoration: none;
+}
+
+.display-and-positioning {
+  word-spacing: -7.5px;
+}
+  
+.nav-link:visited {
+  color: darkcyan;
+}
+  
+a.nav-link:hover {
+  color: greenyellow;
+}
+
+img {
+  display: block;
+  margin: 70px auto 0px auto;
+}
+
+.image-source {
+  text-align: center;
+}
+
+a {
+  color: darkcyan;
+  text-decoration: none;
+}
+
+a:visited {
+  color: darkcyan;
+}
+  
+a:hover {
+  color: greenyellow;
+}
+
+#margin-collapse {
+  margin: 0px auto;
+}
   
 table {
   text-align: center;

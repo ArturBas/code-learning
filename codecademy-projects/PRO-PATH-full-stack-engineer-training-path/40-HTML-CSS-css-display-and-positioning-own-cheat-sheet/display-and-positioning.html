@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Display and Positioning own cheat sheet</title>
+    <link rel="stylesheet" type="text/css" href="./resources/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./resources/css/styles.css">
+</head>
+<body>
+    <header>
+      <ul class="navigation">
+        <a class="nav-link display-and-positioning" href="">Display & Positioning</a>
+        <a class="nav-link" href="./box.html">Box</a>
+        <a class="nav-link" href="./flexbox.html">Flexbox</a>
+        <a class="nav-link" href="./grid.html">Grid</a>
+      </ul>
+      <p></p>
+    </header>
+    <section>
+      <img src="./resources/images/css-positioning.jpg" alt="box model image" width="720px"/>
+      <p class="image-source">source: <a href="https://chenhuijing.com/" target=”_blank”>Chen Hui Jing Blog</a></p>
+      <div class="container">
+        <table>
+          <thead>
+            <tr>
+              <th>
+                <p class="tab-title">Command / Parameter</p>
+              </th>
+              <th>
+                <p class="tab-title">Execution</p>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="left">
+                <p class="command">position: <span>value</span>;</p>
+              </td>
+              <td>
+                <p class="execution">one of properties for block-level elements, changes position of the element, can take following values:<br><br>
+                  - static - the default value (it does not need to be specified)<br>
+                  - relative<br>
+                  - absolute<br>
+                  - fixed<br>
+                  - sticky<br><br>
+                  the position declaration can be accompanying with one or more of the following offset properties that will move the element away from its default static position:<br><br>
+                  - top - moves the element down from the top<br>
+                  - bottom - moves the element up from the bottom<br>
+                  - left - moves the element away from the left side (to the right)<br>
+                  - right - moves the element away from the right side (to the left)<br><br>
+                  <span>NOTE:<br>
+                    - the above properties can be specified with values in pixels, ems, or percentages, among others, to dial in exactly how far the element needs be to move
+                    - offset properties will not work if the element's position property is the default static
+                  </span>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">position: <span>relative</span>;</p>
+              </td>
+              <td>
+                <p class="execution">allows to position an element relative to its default static position on the web page, to specify where the when element should be positioned on the page
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">position: <span>absolute</span>;</p>
+              </td>
+              <td>
+                <p class="execution">when an element's position is set to absolute, all other elements on the page will ignore the element and act like it is not present on the page, the element will be positioned relative to its closest positioned parent element, while offset properties can be used to determine the final position from there</p>
+              </td>
+            </tr> 
+            <tr>
+              <td class="left">
+                <p class="command">position: <span>fixed</span>;</p>
+              </td>
+              <td>
+                <p class="execution">fixs an element to a specific position on the page (regardless of user scrolling)</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">position: <span>sticky</span>;</p>
+              </td>
+              <td>
+                <p class="execution">keeps an element in the document flow as the user scrolls, but sticks to a specified position as the page is scrolled further</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">z-index: <span>value</span>;</p>
+              </td>
+              <td>
+                <p class="execution">controls how far back or how far forward an element should appear on the web page when elements overlap, this can be thought of as the depth of elements, with deeper elements appearing behind shallower elements, the z-index property accepts integer values (depending on their values, the integers instruct the browser on the order in which elements should be layered on the web page)<br><br>
+                  <span>NOTE:<br>
+                    - a default z-index value is 0<br>
+                    - z-index property does not work on static elements
+                  </span>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">display: <span>value</span>;</p>
+              </td>
+              <td>
+                <p class="execution">dictates if it can share horizontal space with other elements, some elements fill the entire browser from left to right regardless of the size of their content, other elements only take up as much horizontal space as their content requires and can be directly next to other elements</p>
+              </td>
+            </tr>                        
+            <tr>
+              <td class="left">
+                <p class="command">display: <span>block</span>;</p>
+              </td>
+              <td>
+                <p class="execution">block-level elements fill the entire width of the page by default (they are not displayed in the same line as the content around them), but their width property can also be set, unless otherwise specified, they are the height necessary to accommodate their content</p>
+              </td>
+            </tr>  
+            <tr>
+              <td class="left">
+                <p class="command">display: <span>inline-block</span>;</p>
+              </td>
+              <td>
+                <p class="execution">combines features of both inline and block elements, inline-block elements can appear next to each other and can be specified in their dimensions using the width and height properties (images are the best example of default inline-block elements)</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">float: <span>value</span>;</p>
+              </td>
+              <td>
+                <p class="execution">moves an element as far 'left' or as far 'right' as possible in the container, is commonly used for wrapping text around an image<br><br>
+                  <span>NOTE:<br>
+                    - moving elements left or right for layout purposes is better suited for tools like CSS grid and flexbox<br>
+                    - floated elements must have a width specified, otherwise, the element will assume the full width of its containing element, and changing the float value will not yield any visible results
+                  </span>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">clear: <span>value</span>;</p>
+              </td>
+              <td>
+                <p class="execution">specifies how elements should behave when they bump into each other on the page, can take on one of the following values:<br><br>
+                  - left — the left side of the element will not touch any other element within the same containing element<br>
+                  - right — the right side of the element will not touch any other element within the same containing element<br>
+                  - both — neither side of the element will touch any other element within the same containing element<br>
+                  - none — the element can touch either side
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>    
+    </section>   
+</body>
+<footer>
+  <p>&copy; Artur Bas 2022</p>
+</footer>
+</html>

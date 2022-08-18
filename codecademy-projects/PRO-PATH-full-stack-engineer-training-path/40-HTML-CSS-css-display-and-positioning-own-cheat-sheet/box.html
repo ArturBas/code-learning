@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model own cheat sheet</title>
+    <link rel="stylesheet" type="text/css" href="./resources/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./resources/css/styles.css">
+</head>
+<body>
+    <header>
+      <ul class="navigation">
+        <a class="nav-link display-and-positioning" href="./display-and-positioning.html">Display & Positioning</a>
+        <a class="nav-link" href="">Box</a>
+        <a class="nav-link" href="./flexbox.html">Flexbox</a>
+        <a class="nav-link" href="./grid.html">Grid</a>
+      </ul>
+    </header>
+    <section>
+      <img src="./resources/images/box-model-properties.png" alt="box model image" height="400px"/>
+      <p class="image-source">source: <a href="https://webskillsbootcamp.teachable.com/" target=”_blank”>Lon Hosford's Website Skills Bootcamp</a></p>
+      <div class="container">
+        <table>
+          <thead>
+            <tr>
+              <th>
+                <p class="tab-title">Command / Parameter</p>
+              </th>
+              <th>
+                <p class="tab-title">Execution</p>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="left">
+                <p class="command">height: <span>value</span>;</p>
+                <p class="command">width: <span>value</span>;</p>
+              </td>
+              <td>
+                <p class="execution">properties modify default dimensions of an HTML box<br><br>
+                  <span>NOTE:<br> pixels allow to set the exact size of an element's box (width and height), when the width and height of an element are set in pixels, it will be the same size on all devices — an element that fills a laptop screen will overflow a mobile screen</span>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">border: <span>width style color</span>;</p>
+              </td>
+              <td>
+                <p class="execution">a line that surrounds an element, like a frame around a painting, can be set with a specific width, style, and color:<br><br>
+                  - width — the thickness of the border, can be set in pixels or with one of the following keywords: thin, medium, or thick<br>
+                  - style — the design of the border, web browsers can render any of 10 different styles, some of these styles include: none, dotted, and solid<br>
+                  - color — the color of the border, web browsers can render colors using a few different formats, including 140 built-in color keywords<br><br>
+                  <span>NOTE: the default border is medium none color, where color is the current color of the element, if width, style, or color are not set in the CSS file, the web browser assigns the default value for that property</span>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">border-radius: <span>value</span>;</p>
+              </td>
+              <td>
+                <p class="execution">modifies the corners of an element's border box<br><br>
+                  <span>NOTE: there is possible to create a border that is a perfect circle by first creating an element with the same width and height, and then setting the radius equal to half the width of the box, which is 50%</span>
+                </p>
+              </td>
+            </tr> 
+            <tr>
+              <td class="left">
+                <p class="command">padding: <span>value(s)</span>;</p>
+              </td>
+              <td>
+                <p class="execution">padding is the space between the contents of a box and the borders of a box, it can be modified with this property, it is often used to expand the background color and make the content look less cramped<br><br>
+                  <span>NOTE: to be more specific about the amount of padding on each side of a box's content, the following properties can be used:<br><br>
+                    - padding-top<br>
+                    - padding-right<br>
+                    - padding-bottom<br>
+                    - padding-left<br>
+                    each property affects the padding on only one side of the box's content, giving a more flexibility in customization,<br><br>
+                    Padding shorthand lets specify all of the padding properties as values on a single line:<br><br>
+                    - the four values correspond to the amount of padding on each side, in a clockwise rotation<br>
+                    - the three values: the first value sets the padding-top value, the second value sets the padding-left and padding-right values, and the third value sets the padding-bottom value<br>
+                    - two values: the first value sets the padding-top and padding-bottom values, and the second value sets the padding-left and padding-right values
+                  </span>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">margin: <span>value(s)</span>;</p>
+              </td>
+              <td>
+                <p class="execution">margin refers to the space directly outside of the box, it can be modified with this property<br><br>
+                  <span>
+                    NOTE: to be more specific about the amount of margin on each side of a box's content, the following properties can be used:<br><br>
+                    - margin-top<br>
+                    - margin-right<br>
+                    - margin-bottom<br>
+                    - margin-left<br>
+                    each property affects the margin on only one side of the box's content, giving a more flexibility in customization,<br><br>
+                    Margin shorthand lets specify all of the margin properties as values on a single line:<br><br>
+                    - the four values correspond to the amount of margin on each side, in a clockwise rotation<br>
+                    - the three values: the first value sets the margin-top value, the second value sets the margin-left and margin-right values, and the third value sets the margin-bottom value<br>
+                    - two values: the first value sets the margin-top and margin-bottom values, and the second value sets the margin-left and margin-right values
+                  </span>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">margin: <span>value auto</span>;</p>
+              </td>
+              <td>
+                <p class="execution">the margin property also lets to center content - the auto value instructs the browser to adjust the left and right margins until the element is centered within its containing element<br><br>
+                  <span>
+                  in order to center an element, a width must be set for that element, otherwise, the width of the div will be automatically set to the full width of its containing element, like the 'body', for example - it's not possible to center an element that takes up the full width of the page, since the width of the page can change due to display and/or browser window size
+                  </span>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">Margin Collapse</p>
+                <img id="margin-collapse" src="./resources/images/vertical-margins-collapse.png" alt="the vertical margin collapse image" width="400px" target=”_blank”/>
+                <p class="image-source">source: <a href="https://www.codecademy.com/">codecademy</a></p>
+              </td>
+              <td>
+                <p class="execution">- top and bottom margins, also called vertical margins, collapse, while top and bottom padding does not<br>
+                  - horizontal margins (left and right), like padding, are always displayed and added together. For example, if two divs with ids #div-one and #div-two, are next to each other, they will be as far apart as the sum of their adjacent margins<br>
+                  - unlike horizontal margins, vertical margins do not add, instead, the larger of the two vertical margins sets the distance between adjacent elements<br>
+                  - it may be helpful to think of collapsing vertical margins as a short person trying to push a taller person - the tall person has longer arms and can easily push the short person, while the person with short arms cannot reach the person with long arms
+                </p>
+              </td>
+            </tr>                        
+            <tr>
+              <td class="left">
+                <p class="command">min-height: <span>value</span>;</p>
+                <p class="command">max-height: <span>value</span>;</p>
+              </td>
+              <td>
+                <p class="execution">these properties ensure a minimum and/or maximum height for an element's box - content, like text, can become difficult to read when a browser window is narrowed or expanded - these two properties ensure that content is legible by limiting the minimum and maximum widths of an element</p>
+              </td>
+            </tr>  
+            <tr>
+              <td class="left">
+                <p class="command">overflow: <span>value</span>;</p>
+              </td>
+              <td>
+                <p class="execution">controls what happens to content that spills, or overflows, outside its box, the most commonly used values are:<br><br>
+                  - hidden — when set to this value, any content that overflows will be hidden from view<br>
+                  - scroll — when set to this value, a scrollbar will be added to the element’s box so that the rest of the content can be viewed by scrolling<br>
+                  - visible—when set to this value, the overflow content will be displayed outside of the containing element (note, this is the default value)<br><br>
+                  <span>
+                    NOTE: the overflow property is set on a parent element to instruct a web browser on how to render child elements (for example, if a div’s overflow property is set to scroll, all children of this div will display overflowing content with a scroll bar)<br><br>
+                    For a more in-depth look at overflow, including additional properties like overflow-x and overflow-y that separate out the horizontal and vertical values, head over to the MDN documentation
+                  </span>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">Resetting Defaults</p>
+              </td>
+              <td>
+                <p class="execution">
+                  all major web browsers have a default stylesheet they use in the absence of an external stylesheet, known as user agent stylesheets, it often has default CSS rules that set default values for padding and margin - this affects how the browser displays HTML elements, which can make it difficult for a developer to design or style a web page<br><br>
+
+                  Many developers choose to reset these default values so that they can truly work with a clean slate.<br><br>
+                  <span>
+                    NOTE: when these properties are set to 0, they do not require a unit of measurement
+                  </span>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">visibility: <span>value</span>;</p>
+              </td>
+              <td>
+                <p class="execution">
+                  elements can be hidden from view with this property, it can be set to one of the following values:<br><br>
+                  - hidden — hides an element<br>
+                  - visible — displays an element<br>
+                  - collapse — collapses an element<br><br>
+                  <span>
+                    NOTE:<br>
+                    - users can still view the contents of the list item by viewing the source code in their browser, furthermore, the web page will only hide the contents of the element - it will still leave an empty space where the element is intended to display<br>
+                    - an element with 'display: none' will be completely removed from the web page, an element with 'visibility: hidden', however, will not be visible on the web page, but the space reserved for it will
+                  </span>
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>    
+    </section>   
+</body>
+<footer>
+  <p>&copy; Artur Bas 2022</p>
+</footer>
+</html>

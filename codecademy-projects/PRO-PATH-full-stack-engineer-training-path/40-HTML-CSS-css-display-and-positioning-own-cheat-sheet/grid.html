@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid own cheat sheet</title>
+    <link rel="stylesheet" type="text/css" href="./resources/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./resources/css/styles.css">
+</head>
+<body>
+    <header>
+      <ul class="navigation">
+        <a class="nav-link display-and-positioning" href="./display-and-positioning.html">Display & Positioning</a>
+        <a class="nav-link" href="./box.html">Box</a>
+        <a class="nav-link" href="./flexbox.html">Flexbox</a>
+        <a class="nav-link" href="">Grid</a>
+      </ul>
+    </header>
+    <img src="./resources/images/grid.png" alt="grid model image" width="720px"/>
+    <p class="image-source">source: <a href="https://codecademy.com/" target=”_blank”>codecademy</a></p>
+    <section>
+      <div class="container">
+        <table>
+          <thead>
+            <tr>
+              <th>
+                <p class="tab-title">Command / Parameter</p>
+              </th>
+              <th>
+                <p class="tab-title">Execution</p>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="left">
+                <p class="command">display: <span>value</span>;</p>
+              </td>
+              <td>
+                <p class="execution">turns an HTML element into a grid container, possible values:<br>
+                  - grid — for a block-level grid<br>
+                  - inline-grid — for an inline grid
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">grid-template-columns: <span>values</span>;</p>
+              </td>
+              <td>
+                <p class="execution">defines the columns of our grid
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">grid-template-rows: <span>values</span>;</p>
+              </td>
+              <td>
+                <p class="execution">defines the rows of our grid
+                </p>
+              </td>
+            </tr> 
+            <tr>
+              <td class="left">
+                <p class="command">grid-template: <span>row's values / column's values</span>;</p>
+              </td>
+              <td>
+                <p class="execution">the shorthand property, grid-template, can replace both grid-template-rows and grid-template-columns properties -  the values before the slash will determine the size of each row, the values after the slash determine the size of each column
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">absolute-type CSS units</p>
+              </td>
+              <td>
+                <p class="execution">
+                  - cm - centimeters<br>
+                  - mm - millimeters<br>
+                  - in - inches (1in = 96px = 2.54cm)<br>
+                  - px * - pixels (1px = 1/96th of 1in)<br>
+                  - pt - points (1pt = 1/72 of 1in)<br>
+                  - pc - picas (1pc = 12 pt)<br><br>
+                  <span>NOTE:<br> * Pixels (px) are relative to the viewing device. For low-dpi devices, 1px is one device pixel (dot) of the display. For printers and high resolution screens 1px implies multiple device pixels</span>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">relative-type CSS units</p>
+              </td>
+              <td>
+                <p class="execution">
+                  - em - relative to the font-size of the element (2em means 2 times the size of the current font)<br>
+                  - ex - relative to the x-height of the current font (rarely used)<br>
+                  - ch - relative to the width of the "0" (zero)<br>
+                  - rem - relative to font-size of the root element<br>
+                  - vw - relative to 1% of the width of the viewport*<br>
+                  - vh - relative to 1% of the height of the viewport*<br>
+                  - vmin - relative to 1% of viewport's* smaller dimension<br>	
+                  - vmax - relative to 1% of viewport's* larger dimension<br>
+                  - % - Relative to the parent element<br><br>
+                  <span>
+                    NOTE: * Viewport = the browser window size. If the viewport is 50cm wide, 1vw = 0.5cm<br><br>
+                    TIP: The em and rem units are practical in creating perfectly scalable layout!
+                  </span>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">repeat(<span>number of repeats [int], the specifications for rows or columns [units]</span>)</p>
+              </td>
+              <td>
+                <p class="execution">the repeat function will duplicate the specifications for rows or columns a given number of times</p>
+              </td>
+            </tr>                        
+            <tr>
+              <td class="left">
+                <p class="command">minmax(<span>min value, max value</span>)</p>
+              </td>
+              <td>
+                <p class="execution">prevents a row or column from getting too big or too small</p>
+              </td>
+            </tr>  
+            <tr>
+              <td class="left">
+                <p class="command">row-gap: <span>value</span>;</p>
+              </td>
+              <td>
+                <p class="execution">puts blank space between every row in the grid</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">column-gap: <span>value</span>;</p>
+              </td>
+              <td>
+                <p class="execution">puts blank space between every column in the grid</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">gap: <span>value1 value2(optionally)</span>;</p>
+              </td>
+              <td>
+                <p class="execution">the shorthand for row-gap and column-gap properties, sets the row and column gap at the same time</p><br>
+                <span>NOTE:<br>
+                  - use only one value if you want to set the same gap for rows and columns<br>
+                  - this shorthand does not take a / between values!<br>
+                  - you might have seen grid-row-gap, grid-column-gap, and grid-gap in other code, but these properties are now deprecated</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">
+                  grid-row-start: <span>value</span>;</br>
+                  grid-row-end: <span>value</span>;
+                </p>                      
+              </td>
+              <td>
+                <p class="execution">makes single grid items take up multiple rows, possible values:
+                  - the 'auto' keyword - it indicates that the property contributes nothing to the grid item's placement, indicating auto-placement, an automatic span, or a default span of 1<br>
+                  - a 'custom-ident' value - if there is a named line with the name '[custom-ident]-start', it contributes the first such line to the grid item's placement, otherwise, this is treated as if the integer 1 had been specified along with the 'custom-ident'<br>
+                  - an 'integer' value<br>
+                  - both 'custom-ident' and 'integer', separated by a space<br>
+                  - the keyword span (starts or ends a column or row, relative to its other end, in other words, it is telling the item element to begin in column x and take up y-columns of space) together with either a 'custom-ident' or an 'integer' or both
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">grid-row: <span>value1 / value2</span>;<br>                    
+              </td>
+              <td>
+                <p class="execution">the shorthand for grid-row-start and grid-row-end properties, sets the row start (before the '/') and row end (before the '/') at the same time</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">
+                  grid-column-start: <span>value</span>;</br>
+                  grid-column-end: <span>value</span>;
+                </p>                      
+              </td>
+              <td>
+                <p class="execution">makes single grid items take up multiple columns, possible values:
+                  - the 'auto' keyword - it indicates that the property contributes nothing to the grid item's placement, indicating auto-placement, an automatic span, or a default span of 1<br>
+                  - a 'custom-ident' value - if there is a named line with the name '[custom-ident]-start', it contributes the first such line to the grid item's placement, otherwise, this is treated as if the integer 1 had been specified along with the 'custom-ident'<br>
+                  - an 'integer' value<br>
+                  - both 'custom-ident' and 'integer', separated by a space<br>
+                  - the keyword span (starts or ends a column or row, relative to its other end, in other words, it is telling the item element to begin in column x and take up y-columns of space) together with either a 'custom-ident' or an 'integer' or both
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">grid-column: <span>value1 / value2</span>;<br>                    
+              </td>
+              <td>
+                <p class="execution">the shorthand for grid-column-start and grid-column-end properties, sets the column start (before the '/') and column end (before the '/') at the same time</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">grid-area: <span>value1 / value2 / value3 / value4</span>;</p>
+              </td>
+              <td>
+                <p class="execution">sets the starting and ending positions for both the rows and columns of an item<br><br>
+                  <span>
+                    NOTE: the order is important! This is how grid-area will interpret those values:<br>
+                    - grid-row-start<br>
+                    - grid-column-start<br>
+                    - grid-row-end<br>
+                    - grid-column-end
+                  </span>
+                </p>
+              </td>
+            </tr>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">grid-template-areas: <span>values</span>;</p>
+              </td>
+              <td>
+                <p class="execution">allows to name sections of the web page to use as values in the grid-row-start, grid-row-end, grid-column-start, grid-column-end and grid-area properties. This property is declared on grid containers.<br><br>
+                  <span>NOTE:<br>
+                    - flex items shrinks automatically when the flex container is too small, even though we had not declared the property - this is because the default value of flex-shrink is 1<br>
+                    - margins are unaffected by flex-shrink<br>
+                    - minimum and maximum widths will take precedence over flex-shrink<br>
+                    - flex-shrink will only be employed if the parent container is too small or the browser is adjusted
+                  </span>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">overlapping elements</p>
+              </td>
+              <td>
+                <p class="execution">when overlapping elements, it is generally easiest to use the grid-area property with grid row names</p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">justify-items: <span>value</span>;</p>
+              </td>
+              <td>
+                <p class="execution">positions grid items along the inline, or row, axis (this means that it positions items from left to right across the web page), declared on grid containers, accepts following values:<br><br>
+                  - start — aligns grid items to the left side of the grid area<br>
+                  - end — aligns grid items to the right side of the grid area<br>
+                  - center — aligns grid items to the center of the grid area<br>
+                  - stretch — stretches all items to fill the grid area<br><br>
+                  <span>NOTE:<br>
+                    - there are several other values that justify-items accepts, which you can read about on the Mozilla Developer Network<br>
+                    - the definitions for these values can also be found in the documentation<br>
+                    - it is important to note that the page with the definitions includes some values that are not accepted in CSS Grid layout
+                  </span>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">justify-content: <span>value</span>;</p>
+              </td>
+              <td>
+                <p class="execution">positions the entire grid along the row axis, declared on grid containers. accepts following values:<br><br>
+                  - start — aligns the grid to the left side of the grid container<br>
+                  - end — aligns the grid to the right side of the grid container<br>
+                  - center — centers the grid horizontally in the grid container<br>
+                  - stretch — stretches the grid items to increase the size of the grid to expand horizontally across the container<br>
+                  - space-around — includes an equal amount of space on each side of a grid element, resulting in double the amount of space between elements as there is before the first and after the last element<br>
+                  - space-between — includes an equal amount of space between grid items and no space at either end<br>
+                  - space-evenly — places an even amount of space between grid items and at either end<br><br>
+                  <span>NOTE:<br>
+                    - there are several other values that justify-content accepts, which you can read about on the Mozilla Developer Network<br>
+                    - the definitions for these values can also be found in the documentation<br>
+                    - it is important to note that the page with the definitions includes some values that are not accepted in CSS Grid layout
+                  </span>  
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">align-items: <span>value</span>;<br>                  
+              </td>
+              <td>
+                <p class="execution">positions grid items along the block, or column axis (this means that it positions items from top to bottom), declared on grid containers, accepts following values:<br><br>
+                  - start — aligns grid items to the top side of the grid area<br>
+                  - end — aligns grid items to the bottom side of the grid area<br>
+                  - center — aligns grid items to the center of the grid area<br>
+                  - stretch — stretches all items to fill the grid area<br><br>
+                  <span>NOTE:<br>
+                    - there are several other values that align-items accepts, which you can read about on the Mozilla Developer Network<br>
+                    - the definitions for these values can also be found in the documentation<br>
+                    - it is important to note that the page with the definitions includes some values that are not accepted in CSS Grid layout
+                  </span>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">align-content: <span>value</span>;</p>
+              </td>
+              <td>
+                <p class="execution">positions the rows along the column axis, or from top to bottom, declared on grid containers, accepts following positional values:<br><br>
+                  - start — aligns the grid to the top of the grid container<br>
+                  - end — aligns the grid to the bottom of the grid container<br>
+                  - center — centers the grid vertically in the grid container<br>
+                  - stretch — stretches the grid items to increase the size of the grid to expand vertically across the container<br>
+                  - space-around — includes an equal amount of space on each side of a grid element, resulting in double the amount of space between elements as there is before the first and after the last element<br>
+                  - space-between — includes an equal amount of space between grid items and no space at either end<br><br>
+                  - space-evenly — places an even amount of space between grid items and at either end<br><br>
+                  <span>NOTE:<br>
+                    - there are several other values that align-content accepts, which you can read about on the Mozilla Developer Network<br>
+                    - the definitions for these values can also be found in the documentation<br>
+                    - it is important to note that the page with the definitions includes some values that are not accepted in CSS Grid layout
+                  </span>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">justify-self: <span>value</span>;</p>
+                <p class="command">align-self: <span>value</span>;</p>
+              </td>
+              <td>
+                <p class="execution">
+                  - justify-self specifies how an individual element should position itself with respect to the row axis, it will override justify-items for any item on which it is declared<br>
+                  - align-self specifies how an individual element should position itself with respect to the column axis, it will override align-items for any item on which it is declared<br><br>
+                  These properties are declared on grid items, they both accept following four properties:<br><br>
+                  - start — positions grid items on the left side/top of the grid area<br>
+                  - end — positions grid items on the right side/bottom of the grid area<br>
+                  - center — positions grid items on the center of the grid area<br>
+                  - stretch — positions grid items to fill the grid area (default)<br><br>
+                  <span>NOTE:<br>
+                    - align-self and justify-self accept the same values as align-items and justify-items<br>
+                    - there are several other values that justify-self and align-self accept, which you can read about on the Mozilla Developer Network<br>
+                    - the definitions for these values can also be found in the documentation<br>
+                    - it is important to note that the page with the definitions includes some values that are not accepted in CSS Grid layout
+                  </span>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">implicit grid</p>
+              </td>
+              <td>
+                <p class="execution">is an algorithm built into the specification for CSS Grid that determines default behavior for the placement of elements when there are more than fit into the grid specified by the CSS<br><br>
+                  <span>NOTE:<br>
+                    - he default behavior of the implicit grid is as follows: items fill up rows first, adding new rows as necessary<br>
+                    - new grid rows will only be tall enough to contain the content within them
+                  </span>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">grid-auto-rows: <span>value</span>;</p>
+                <p class="command">grid-auto-columns: <span>value</span>;</p>
+              </td>
+              <td>
+                <p class="execution">these properties specify the size of grid tracks added implicitly, declared on grid containers<br><br>
+                  - grid-auto-rows specifies the height of implicitly added grid rows<br>
+                  - grid-auto-columns specifies the width of implicitly added grid columns<br>
+                  - grid-auto-rows and grid-auto-columns accept the same values as their explicit counterparts, grid-template-rows and grid-template-columns:<br><br>
+                  - pixels (px)<br>
+                  - percentages (%)<br>
+                  - fractions (fr)<br>
+                  - the repeat() function<br>
+                  <span>NOTE:<br>
+                    if we did not specify grid-auto-rows, the rows would be auto-adjusted to the height of the content of the grid items
+                  </span>
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td class="left">
+                <p class="command">grid-auto-flow: <span>value</span>;</p>
+              </td>
+              <td>
+                <p class="execution">specifies whether new elements should be added to rows or columns, and is declared on grid containers, accepts following values:<br><br>
+                  - row — specifies the new elements should fill rows from left to right and create new rows when there are too many elements (default)<br>
+                  - column — specifies the new elements should fill columns from top to bottom and create new columns when there are too many elements<br>
+                  - dense — this keyword invokes an algorithm that attempts to fill holes earlier in the grid layout if smaller elements are added<br><br>
+                  <span>NOTE:<br>
+                    you can pair row or column with dense, like this: grid-auto-flow: row dense;
+                  </span>
+                </p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>    
+    </section>   
+</body>
+<footer>
+  <p>&copy; Artur Bas 2022</p>
+</footer>
+</html>
