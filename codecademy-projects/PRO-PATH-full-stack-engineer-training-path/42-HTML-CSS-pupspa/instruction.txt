@@ -1,0 +1,12 @@
+Your friend has just opened a doggie daycare and grooming services shop, PupSpa. They would like a simple web page to let customers know about their services.
+
+We currently have an HTML document styled with CSS, but every <div> appears in its own row. Let’s add some CSS grid properties to make parts of the site appear more cohesive. Some of the properties that should be used are:
+
+  - display
+  - grid-template-rows
+  - grid-template-columns
+  - gap
+  - grid-column-start
+  - grid-column-end
+
+A couple of the shorthand properties of these should be also cover as well.
